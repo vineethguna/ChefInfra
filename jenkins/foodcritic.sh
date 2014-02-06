@@ -1,1 +1,1 @@
-#Build script for foodcritic checks
+#!/bin/bash
