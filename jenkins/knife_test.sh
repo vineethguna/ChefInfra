@@ -13,7 +13,7 @@ knife cookbook test -a -o cookbooks || {
 
 if [ $EXIT_CODE -eq 0 ] 
 	then
-		echo "[SUCCESS] All Cookbooks Passed the test"
+		echo "[SUCCESS] All Cookbooks Passed the knife test"
 fi
 
 #Exit Code to return at the end

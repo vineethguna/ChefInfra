@@ -4,7 +4,7 @@ EXIT_CODE=0
 
 #Upload all data_bags to chef-server
 for role in roles/*; do
-	role_name = `basename $role`
+	role_name=`basename $role`
 	echo "Uploading role $role_name"
 	knife upload $role --purge || {
     	echo "[ERROR] Failed to upload role '$role_name' ." >&2

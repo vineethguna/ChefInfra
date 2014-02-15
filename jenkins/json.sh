@@ -19,7 +19,7 @@ done
 
 if [ $EXIT_CODE -eq 0 ] 
 	then
-		echo "[SUCCESS] All Cookbooks Passed the test"
+		echo "[SUCCESS] All json files Passed the test"
 else
 	echo "[ERROR] Failed to validate some json files"
 fi
