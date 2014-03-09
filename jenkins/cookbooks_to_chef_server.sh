@@ -2,7 +2,7 @@
 
 EXIT_CODE=0
 
-#Upload all data_bags to chef-server
+#Upload all cookbooks to chef-server
 
 knife cookbook upload --all || {
 	echo "[ERROR] Failed to upload some cookbooks ." >&2

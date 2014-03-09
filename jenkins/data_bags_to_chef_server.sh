@@ -6,11 +6,13 @@ EXIT_CODE=0
 for data_bag in data_bags/*; do
 	data_bag_name=`basename $data_bag`
 	echo "Uploading databag $data_bag_name"
-	knife upload $data_bag_name --purge || {
-    	echo "[ERROR] Failed to sync data bag '$data_bag_name' ." >&2
-        EXIT_CODE=1
-        break
-    }
+	if [[ "$data_bag_name" != "README.md" ]]; then
+		knife upload $data_bag_name --purge || {
+    		echo "[ERROR] Failed to sync data bag '$data_bag_name' ." >&2
+        	EXIT_CODE=1
+        	break
+    	}
+    fi
 done
 
 if [ $EXIT_CODE -eq 0 ] 
