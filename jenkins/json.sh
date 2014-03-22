@@ -9,7 +9,7 @@ echo "Starting json file checks"
 for data_bag in data_bags/*; do
 	if [ -d $data_bag ]
 		then
-			for data_bag_item in $data_bag/*; do
+			for data_bag_item in $data_bag/*.json; do
 				jsonlint -v $data_bag_item || {
 					EXIT_CODE=1
 				}
